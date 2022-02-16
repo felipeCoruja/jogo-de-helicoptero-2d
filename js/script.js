@@ -173,9 +173,12 @@ function start(){
         if(colisao1.length > 0){
             somExplosao.play();
             //passando a posição do inimigo1 para a explosao
+            console.log("step 1")
             let inimigo1X = parseInt($("#inimigo1").css("left"));
             let inimigo1Y = parseInt($("#inimigo1").css("top"));
+            console.log("step 2"+inimigo1X +" " + inimigo1Y)
             explosao1(inimigo1X,inimigo1Y);
+            console.log("step 3 explosão já foi chamada")
 
             //setando a posição do inimigo1 no inicio da tela
             positionY = parseInt(Math.random()* 334);//positionY var Global
@@ -253,9 +256,9 @@ function start(){
     
     function explosao1(posicaoX,posicaoY){
         $("#fundoGame").append("<div id='explosao1'></div>");
-        $("#explosao1").css("background-image","url(../jogo1/imgs/explosao.png)");
+        $("#explosao1").css("background-image","url(imgs/Explosao.png)");
 
-        let div = $("#explosao1");
+        const div = $("#explosao1");
         div.css("top",posicaoY);
         div.css("left",posicaoX);
         div.animate({width:200, opacity:0},"slow");//indica que a div vai mudar de tamanho até 200 e a opacidade vai mudar de 100 até 0, com velocidade slow. (a config inicial dessa div está no css)
@@ -272,7 +275,7 @@ function start(){
 
     function explosao2(posicaoX,posicaoY){
         $("#fundoGame").append("<div id='explosao2'></div>");
-        $("#explosao2").css("background-image","url(../jogo1/imgs/explosao.png)");
+        $("#explosao2").css("background-image","url(imgs/Explosao.png)");
 
         let div = $("#explosao2");
         div.css("top",posicaoY);
