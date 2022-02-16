@@ -173,12 +173,10 @@ function start(){
         if(colisao1.length > 0){
             somExplosao.play();
             //passando a posição do inimigo1 para a explosao
-            console.log("step 1")
+            
             let inimigo1X = parseInt($("#inimigo1").css("left"));
             let inimigo1Y = parseInt($("#inimigo1").css("top"));
-            console.log("step 2"+inimigo1X +" " + inimigo1Y)
             explosao1(inimigo1X,inimigo1Y);
-            console.log("step 3 explosão já foi chamada")
 
             //setando a posição do inimigo1 no inicio da tela
             positionY = parseInt(Math.random()* 334);//positionY var Global
